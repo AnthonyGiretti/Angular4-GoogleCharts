@@ -1,0 +1,17 @@
+<h2>{{title}}</h2>
+
+<form>
+    <div class="form-group">
+      <label for="messageTitle">Titre</label>
+      <input type="email" class="form-control" name="messageTitle" placeholder="Enter title" [(ngModel)]="messageTitle">
+    </div>
+
+    
+    
+    <div class="form-group">
+      <label for="messageBody">Message</label>
+      <textarea class="form-control" name="messageBody" rows="3" [(ngModel)]="messageBody"></textarea>
+    </div>
+    
+    <button (click)="sendMessage()" class="btn btn-primary">Submit</button>
+  </form>
