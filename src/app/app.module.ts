@@ -7,8 +7,8 @@ import { DashboardComponent } from './Dashboard/dashboard.component';
 import { DataTableModule } from 'angular-4-data-table';
 import {DonutChartComponent} from './Dashboard/Charts/donutchart.component'
 import { FormsModule }   from '@angular/forms';
+import { GoogleChartsService } from './Services/google-charts.service';
 import { NgModule } from '@angular/core';
-import {TableComponent} from './Dashboard/Table/table.component';
 
 @NgModule({
   declarations: [
@@ -16,8 +16,7 @@ import {TableComponent} from './Dashboard/Table/table.component';
     DashboardComponent,
     AdminComponent,
     ComboChartComponent,
-    DonutChartComponent,
-    TableComponent
+    DonutChartComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +24,7 @@ import {TableComponent} from './Dashboard/Table/table.component';
     DataTableModule ,
     FormsModule
   ],
-  providers: [],
+  providers: [GoogleChartsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
