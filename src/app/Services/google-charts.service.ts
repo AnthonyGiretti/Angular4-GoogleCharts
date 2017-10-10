@@ -10,7 +10,6 @@ export class GoogleChartsService {
   }
 
   public BuildComboChart(elementId: String, data: any[], config: ComboChartConfig) : void {
-    console.log(config);
     var callback = () => {
       var datatable = google.visualization.arrayToDataTable(data);
 
