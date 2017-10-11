@@ -21,15 +21,4 @@ export class GoogleComboChartService extends GoogleChartsBaseService {
 
     this.buildChart(data, chartFunc, options);
   }
-
-  
-  public BuildPieChart(elementId: String, data: any[], config: PieChartConfig) : void {  
-    var chartFunc = () => { return new google.visualization.PieChart(document.getElementById(<string>elementId)); };
-    var options = {
-            title: config.title,
-            pieHole: config.pieHole,
-      };
-
-    this.buildChart(data, chartFunc, options);
-  }
 }
