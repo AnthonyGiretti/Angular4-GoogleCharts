@@ -7,7 +7,8 @@ import { DashboardComponent } from './Dashboard/dashboard.component';
 import { DataTableModule } from 'angular-4-data-table';
 import {DonutChartComponent} from './Dashboard/Charts/donutchart.component'
 import { FormsModule }   from '@angular/forms';
-import { GoogleChartsService } from './Services/google-charts.service';
+import { GoogleComboChartService } from './Services/google-combo-chart.service';
+import { GooglePieChartService } from './Services/google-pie-chart.service';
 import { NgModule } from '@angular/core';
 
 @NgModule({
@@ -24,7 +25,7 @@ import { NgModule } from '@angular/core';
     DataTableModule ,
     FormsModule
   ],
-  providers: [GoogleChartsService],
+  providers: [GoogleComboChartService,GooglePieChartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

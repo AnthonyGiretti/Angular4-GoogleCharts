@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 import { ComboChartConfig } from './../../Models/ComboChartConfig';
-import { GoogleChartsService } from './../../Services/google-charts.service';
+import { GoogleComboChartService } from './../../Services/google-combo-chart.service';
 
 declare var google: any;
 
@@ -16,10 +16,10 @@ export class ComboChartComponent implements OnInit {
     @Input() config: ComboChartConfig;
     @Input() elementId: String;
     
-    constructor(private _chartService: GoogleChartsService) {}
+    constructor(private _comboChartService: GoogleComboChartService) {}
 
     ngOnInit(): void {
         
-        this._chartService.BuildComboChart(this.elementId, this.data, this.config); 
+        this._comboChartService.BuildComboChart(this.elementId, this.data, this.config); 
     }
 }
