@@ -10,7 +10,7 @@ export class DashboardComponent {
   title = 'Reusable charts sample';
 
   data1: any[];
-  config1: ComboChartConfig;
+  config1: PieChartConfig;
   elementId1: String;
 
   data2: any[];
@@ -19,17 +19,18 @@ export class DashboardComponent {
   
   ngOnInit(): void {     
 
-    //Combochart Data & Config
-    this.data1 = [['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Rwanda'],
-                     ['2004/05',  165,      938,         522,             998,           450],
-                     ['2005/06',  135,      1120,        599,             1268,          288],
-                     ['2006/07',  157,      1167,        587,             807,           397],
-                     ['2007/08',  139,      1110,        615,             968,           215],
-                     ['2008/09',  136,      691,         629,             1026,          366]];
-    this.config1 = new ComboChartConfig('Monthly Coffee Production by Country', 'Cups', 'Month');
-    this.elementId1 = 'myComboChart';
+    //Piechart1 Data & Config
+    this.data1 = [['Task', 'Hours per Day'],
+    ['Eat',      3],
+    ['Commute',  2],
+    ['Watch TV', 5],
+    ['Video games', 4],
+    ['Sleep',    10]];
 
-    //Piechart Data & Config
+    this.config1 = new PieChartConfig('My Daily Activities at 20 years old', 0.4);
+    this.elementId1 = 'myPieChart1';
+
+    //Piechart2 Data & Config
     this.data2 = [['Task', 'Hours per Day'],
                   ['Work',     11],
                   ['Eat',      2],
@@ -37,8 +38,8 @@ export class DashboardComponent {
                   ['Watch TV', 2],
                   ['Sleep',    7]]
 
-    this.config2 = new PieChartConfig('My Daily Activities', 0.4);
-    this.elementId2 = 'myPieChart';
+    this.config2 = new PieChartConfig('My Daily Activities at 30 years old', 0.4);
+    this.elementId2 = 'myPieChart2';
   }
 
 }
