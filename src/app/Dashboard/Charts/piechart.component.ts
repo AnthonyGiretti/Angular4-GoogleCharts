@@ -7,10 +7,10 @@ declare var google: any;
 
 
 @Component({
-  selector: 'donut-chart',
-  templateUrl: './donutchart.component.html'
+  selector: 'pie-chart',
+  templateUrl: './piechart.component.html'
 })
-export class DonutChartComponent implements OnInit {
+export class PieChartComponent implements OnInit {
 
     @Input() data: any[];
     @Input() config: PieChartConfig;
